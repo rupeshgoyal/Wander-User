@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="US">
+<head>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/webjars/bootstrap/4.5.0/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/portfolio.css" th:href="@{/css/portfolio.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css" th:href="@{/css/login.css}"/>
+    <script src="http://cdn.jsdelivr.net/webjars/bootstrap/4.5.0/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/3.5.1/jquery.min.js"
+            th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <title>Wander Error Page</title>
+</head>
+<body marginwidth="0" marginheight="0">
+<div class="container">
+    <div class="row">
+        <h1>Error Page</h1>
+    </div>
+    <div class="row"><b>Something went wrong.</b>
+    </div>
+    <br>
+    <div class="row rowDesign">
+        <div class="col-md-4 ml-auto">
+            <span class="legend">TimeStamp:</span>
+        </div>
+        <div class="col-md-8">
+            <span th:text="${errorMessage.timeStamp}"></span>
+        </div>
+    </div>
+    <br>
+    <div class="row rowDesign">
+        <div class="col-md-4 ml-auto">
+            <span class="legend">Error Details:</span>
+        </div>
+        <div class="col-md-8">
+            <span th:text="${errorMessage.message}"></span>
+        </div>
+    </div>
+    <br>
+    <div class="row rowDesign">
+        <div class="col-md-4 ml-auto">
+            <span class="legend">Error Path:</span>
+        </div>
+        <div class="col-md-8">
+            <span th:text="${errorMessage.details}"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
